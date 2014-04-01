@@ -1,9 +1,3 @@
-prepareEnv <- function() {
-  .jinit()
-  .jaddClassPath("./src/java/")
-  .jaddClassPath("./src/java/target/ravro-0.0.1-SNAPSHOT.jar")
-}
-
 simplifyJavaObj <- function (o) {
   if (!inherits(o, "jobjRef") && !inherits(o, "jarrayRef")) 
     return(o)
@@ -22,8 +16,6 @@ simplifyJavaObj <- function (o) {
 }
 
 read.avro <- function (file) {
-  prepareEnv()
-  
   rdr <- .jnew("io/kvant/r/ravro/AvroLoader")
   df <- rdr$load(file)
   cols <- df$getNames()  
