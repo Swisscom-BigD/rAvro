@@ -1,0 +1,9 @@
+Package: ravro
+Type: Package
+Title: Integrated Avro utilities into R envinronment
+Description: Provides parsing of Avro files and data loading into native R data frames.
+Version: 1.0
+Date: 2014-04-01
+Author: Michal Rachtan
+Imports: rJava, plyr
+License: GPL-2
