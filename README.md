@@ -1,7 +1,7 @@
-ravro - Avro utilities for R envinronment.
+ravro
 =====
 
-Provides parsing and **loading** Avro files into native R data frames.
+Integration of Avro Java utilities into R envinronment. Provides parsing and **loading** Avro files into native R data frames.
 
 # Instalation 
 ````
@@ -11,9 +11,11 @@ install_github("ravro", "mrastan")
 ````
 
 # Usage
+
 ````
 library("ravro")
-read.avro("avro_file.avro")
+df <- read.avro("avro_file.avro")
+head(df)
 ````
 
 
