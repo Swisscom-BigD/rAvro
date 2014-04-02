@@ -11,7 +11,7 @@ install_github("ravro", "mrastan")
 ````
 
 # Usage
-
+Avro loading:
 ````
 library("ravro")
 df <- read.avro("avro_file.avro")
