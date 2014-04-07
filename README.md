@@ -7,7 +7,7 @@ Integration of Avro Java utilities into R envinronment. Provides parsing and **l
 ````
 install.packages("devtools")
 library(devtools)
-install_github("ravro", "mrastan")
+install_github("ravro", "Swisscom-BigD")
 ````
 
 # Usage
