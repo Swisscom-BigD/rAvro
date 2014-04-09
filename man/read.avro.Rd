@@ -11,7 +11,7 @@ read.avro(file)
 
 \arguments{
   \item{file}{
-    path to the Avro file which data are to be loaded R data frame. Each Avro record appears as one row in the output table. 
+    path to the Avro file which data are to be loaded into R data frame. Each Avro record appears as one row in the output table. 
   }
 }
 

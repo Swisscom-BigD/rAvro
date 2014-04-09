@@ -1,7 +1,7 @@
 ravro
 =====
 
-Integration of Avro Java utilities into R envinronment. Provides parsing and **loading** Avro files into native R data frames.
+Integration of Avro Java utilities into R envinronment. Provides parsing and loading of Avro files into native R data frames.
 
 # Instalation 
 ````
