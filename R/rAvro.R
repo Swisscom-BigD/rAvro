@@ -2,13 +2,15 @@ simplifyJavaObj <- function (o) {
   if (!inherits(o, "jobjRef") && !inherits(o, "jarrayRef")) 
     return(o)
   cn <- .jclass(o, true = TRUE)
-  if (cn == "java.lang.Boolean") 
+  if (is.jnull(o))
+    NA
+  else if (cn == "java.lang.Boolean") 
     .jcall(o, "Z", "booleanValue")
-  else if (cn == "java.lang.Integer" || cn == "java.lang.Short" || 
-             cn == "java.lang.Character" || cn == "java.lang.Byte") 
+  else if (cn %in% c("java.lang.Integer", "java.lang.Short", 
+                     "java.lang.Character", "java.lang.Byte")) 
     .jcall(o, "I", "intValue")
-  else if (cn == "java.lang.Number" || cn == "java.lang.Double" || 
-             cn == "java.lang.Long" || cn == "java.lang.Float") 
+  else if (cn %in% c("java.lang.Number", "java.lang.Double",
+                     "java.lang.Long", "java.lang.Float"))
     .jcall(o, "D", "doubleValue")
   else if (cn %in% c("java.lang.String", "org.apache.avro.util.Utf8")) 
     .jstrVal(.jcast(o, "java/lang/String"))
